@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript">
+	function checkName(){
+	// alert("checkSubmit()");
+	// 필수 데이터 항목 확인
+	// id(아이디) - id가 id인 객체를 찾아서 변수 id 에 저장해 놓는다.
+	var name = sel("name");
+	// 데이터가 없는 경우의 처리
+		if(!name.value){
+		// 경고 메시지
+		alert("이름을 입력하세요.");
+		// 커서를 비밀번호 입력란에 위치 시킨다.
+		name.focus();
+		// submit()을 취소 시킨다.
+		return false;
+		}
+	}
+	</script>
+</head>
+<body>
+<form action="#" method="post" id="name" onsubmit="return checkName();">
+<label><span class="requedItem">*</span>이름</label>
+<input name = "name" id="name" onkeyup="removeBlank(this);"><br/>
+<button id="Btn">전달</button>
+</form>
+</body>
+</html>

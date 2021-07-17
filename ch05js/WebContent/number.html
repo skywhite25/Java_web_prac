@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>숫자타입의 데이터</title>
+<script type="text/javascript">
+function calcAge(birth) {                 
+
+    var date = new Date();
+
+    var year = date.getFullYear();
+
+    var month = (date.getMonth() + 1);
+
+    var day = date.getDate();       
+
+    if (month < 10) month = '0' + month;
+
+    if (day < 10) day = '0' + day;
+
+    var monthDay = month + day;
+
+       
+
+    birth = birth.replace('-', '').replace('-', '');
+
+    var birthdayy = birth.substr(0, 4);
+
+    var birthdaymd = birth.substr(4, 4);
+
+ 
+
+    var age = monthDay < birthdaymd ? year - birthdayy - 1 : year - birthdayy;
+
+    return age;
+
+} 
+</script>
+<body>
+<button onclick>계산</button>
+</body>
+</html>

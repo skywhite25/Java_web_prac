@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>버튼을 클릭하면 이동하는 박스 만들기</title>
+<style type="text/css">
+table {
+font-size: 1.5em; /* 1em - 보통 크기. em 배수 */
+font-weight: 900; /* font-weight - 글자의 두께: 100 ~ 900 */
+width: 100px;
+text-align: center; /* table 태그 안의 글자 좌,우,가운데 정렬.*/
+margin: 0 auto; /* 테이블 전체 가운데 정렬.*/
+}
+
+.moveBtn:hover{
+background: black;
+color: white;
+cursor:pointer;
+}
+
+#moveDiv{
+width: 100px;
+height: 100px;
+position: absolute;
+
+/* top 속성을 가져오면 150px -> 아래를 누르면 150px + 10px = 160px : 150px -> 숫자 parseInt() + 10 + "px" 
+top의 범위 150px ~ 300px / left의 범위: 10px ~ 500px / 
+*/
+
+top: 150px;
+left: 10px;
+background: orange;
+}
+
+​
+</style>
+<script>
+function set_vals() {
+var el = document.getElementById("moveDiv")
+el.style.left = "10px"
+el.style.top = "150px"
+}
+function moveBox(dir) {
+var elem = document.getElementById("moveDiv")
+var left = elem.style.left
+var top = elem.style.top
+if (dir == "left") {
+elem.style.left = (parseInt(left) - 10).toString() + "px"
+} else if (dir == "right") {
+elem.style.left = (parseInt(left) + 10).toString() + "px"
+} else if(dir == "up") {
+elem.style.top = (parseInt(top) - 10).toString() + "px"
+} else {
+elem.style.top = (parseInt(top) + 10).toString() + "px"
+}
+}
+
+</script>
+</head>
+<body onload="set_vals()">
+<table>
+<tr><td></td><td onclick="moveBox('up');" class="moveBtn" >^</td><td></td></tr>
+<tr><td onclick="moveBox('left');" class="moveBtn"><</td><td></td><td onclick="moveBox('right');" class="moveBtn">></td></tr>
+<tr><td></td><td onclick="moveBox('down');" class="moveBtn">v</td><td></td></tr>
+</table>
+<hr/>
+<div id = "moveDiv"></div>
+</body>
+</html>

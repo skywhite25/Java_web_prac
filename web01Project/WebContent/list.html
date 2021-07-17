@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript">
+	subjects = ["JAVA", "ORACLE", "JavaScript", "JSP"];
+	// ol - li li ... /li /ol
+	
+	document.write("<ol>");
+	for(subject of subjects){
+		document.write("<li>");
+		document.write(subject);
+		document.write("</li>");
+	}
+	// ol tag 끝
+	document.write("</ol>");
+	document.write("<br/>");
+	
+	var str ="";
+	for(var i = 0; i < subjects.length; i++){
+		str += tag("li", subjects[i]);
+	}
+	str = tag("ol", str);
+	document.write(str);
+
+</script>
+</body>
+<div id = "listDiv"></div>
+<script type="text/javascript">
+	sel("listDiv").innerHTML = str;
+</script>
+</html>

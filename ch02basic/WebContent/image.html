@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지</title>
+<style type="text/css">
+.imageList{
+	width:400px;
+	height:500px;
+}
+</style>
+</head>
+
+
+<body>
+<h3>이미지 그대로 표시하기</h3>
+<!-- 이미지를 표시하는 img 태그 -->
+<!-- alt : 만약에 이미지가 표시가 되지 않는다면 나타나는 글자. -->
+<!-- src : 이미지 자원의 위치 -->
+<!-- 내 서버의 위치(상태위치:현재 HTML 파일의 위치를 기준) - 서버를 지정하지 않는다 : 라이센스 내용 필요 -->
+<img alt="눈오는 밤 이미지1" src="img/s_snow01.jpg">
+<!-- 네이버 강아지 이미지 표시 : 라이센스 내용을 확인하지 않아도 된다 -->
+<img alt="귀여운강아지" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110218_19%2Fdhwltn87_1297994644784Jcbr9_JPEG%2F06.jpg&amp;type=sc960_832" data-org-url="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110218_19%2Fdhwltn87_1297994644784Jcbr9_JPEG%2F06.jpg&amp;type=sc960_832" data-org-width="550" data-org-height="432" data-thumb-width="340" data-thumb-height="267" class="_image" alt="">
+<img alt="귀여운강아지2" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150530_180%2Fjmg6746_1432979293041yS46w_JPEG%2F0530%25BB%25E7%25C1%25F8%252C%252C%252C.jpg&amp;type=sc960_832" data-org-url="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150530_180%2Fjmg6746_1432979293041yS46w_JPEG%2F0530%25BB%25E7%25C1%25F8%252C%252C%252C.jpg&amp;type=sc960_832" data-org-width="720" data-org-height="516" data-thumb-width="340" data-thumb-height="244" class="_image" alt="">
+<!-- 내 서버의 위치(절대위치:맨 상위위치 - '/ch02basic/'- '/ + path + /' : WebContent 위치) -->
+<img alt="눈오는 밤 이미지2" src="/ch02basic/img/s_snow02.jpg">
+<br/>
+<h3>width와 height 속성을 이용한 이미지 크기 지정</h3>
+<img alt="눈오는 밤 이미지1" src="img/s_snow01.jpg"width="300px" height="500px">
+<img alt="귀여운강아지" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110218_19%2Fdhwltn87_1297994644784Jcbr9_JPEG%2F06.jpg&amp;type=sc960_832" data-org-url="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110218_19%2Fdhwltn87_1297994644784Jcbr9_JPEG%2F06.jpg&amp;type=sc960_832" data-org-width="550" data-org-height="432" data-thumb-width="340" data-thumb-height="267" class="_image" alt=""width="400px" height="500px">
+<img alt="귀여운강아지2" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150530_180%2Fjmg6746_1432979293041yS46w_JPEG%2F0530%25BB%25E7%25C1%25F8%252C%252C%252C.jpg&amp;type=sc960_832" data-org-url="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150530_180%2Fjmg6746_1432979293041yS46w_JPEG%2F0530%25BB%25E7%25C1%25F8%252C%252C%252C.jpg&amp;type=sc960_832" data-org-width="720" data-org-height="516" data-thumb-width="340" data-thumb-height="244" class="_image" alt=""width="400px" height="500px">
+<img alt="눈오는 밤 이미지2" src="/ch02basic/img/s_snow02.jpg"width="400px" height="500px">
+
+<h3>style(CSS)의 width와 height 속성을 이용한 이미지 크기 지정</h3>
+<img alt="눈오는 밤 이미지1" src="img/s_snow01.jpg" style="width:500px;height:400px;">
+<img alt="귀여운강아지" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110218_19%2Fdhwltn87_1297994644784Jcbr9_JPEG%2F06.jpg&amp;type=sc960_832" data-org-url="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110218_19%2Fdhwltn87_1297994644784Jcbr9_JPEG%2F06.jpg&amp;type=sc960_832" data-org-width="550" data-org-height="432" data-thumb-width="340" data-thumb-height="267" class="_image" alt=""style="width:500px;height:400px;">
+<img alt="귀여운강아지2" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150530_180%2Fjmg6746_1432979293041yS46w_JPEG%2F0530%25BB%25E7%25C1%25F8%252C%252C%252C.jpg&amp;type=sc960_832" data-org-url="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150530_180%2Fjmg6746_1432979293041yS46w_JPEG%2F0530%25BB%25E7%25C1%25F8%252C%252C%252C.jpg&amp;type=sc960_832" data-org-width="720" data-org-height="516" data-thumb-width="340" data-thumb-height="244" class="_image" alt=""style="width:500px;height:400px;">
+<img alt="눈오는 밤 이미지2" src="/ch02basic/img/s_snow02.jpg"width="400px" height="500px">
+
+
+<h3>CSS를 이용한 width와 height 속성을 이용한 이미지 크기 지정</h3>
+<p>
+class = class이름 : 적용하려는 객체가 여러개일때 <br/>
+id = id이름 : 적용하려는 객체가 하나일때<br/>
+<img alt="눈오는 밤 이미지1" src="img/s_snow01.jpg" class="imageList">
+<img alt="귀여운강아지" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110218_19%2Fdhwltn87_1297994644784Jcbr9_JPEG%2F06.jpg&amp;type=sc960_832" data-org-url="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110218_19%2Fdhwltn87_1297994644784Jcbr9_JPEG%2F06.jpg&amp;type=sc960_832" data-org-width="550" data-org-height="432" data-thumb-width="340" data-thumb-height="267" class="_image" alt=""class="imageList">
+<img alt="귀여운강아지2" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150530_180%2Fjmg6746_1432979293041yS46w_JPEG%2F0530%25BB%25E7%25C1%25F8%252C%252C%252C.jpg&amp;type=sc960_832" data-org-url="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150530_180%2Fjmg6746_1432979293041yS46w_JPEG%2F0530%25BB%25E7%25C1%25F8%252C%252C%252C.jpg&amp;type=sc960_832" data-org-width="720" data-org-height="516" data-thumb-width="340" data-thumb-height="244" class="_image" alt=""class="imageList">
+<img alt="눈오는 밤 이미지2" src="/ch02basic/img/s_snow02.jpg"width=""class="imageList">
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>버튼을 클릭하면 이동하는 박스만들기</title>
+
+<script type="text/javascript" src="util.js"></script>
+
+<style type="text/css">
+table{
+ 	font-size: 1.5em;  /* 1em -> 보통크기, em -> 배수 */
+ 	font-weight: 900; /* 글자의 두께  : 100~900 */
+ 	width: 100px;
+ 	text-align: center; /* table 태그안의 글자를 좌우 가운데 정렬 */
+ 	margin: 0 auto; /* 테이블 전체를 가운데 정렬 */
+}
+.moveBtn:hover{
+	background: black;
+	color: white;
+	cursor: pointer;
+}
+
+#moveDiv{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	/* top 속성을 가져오면 150px -> 아래를 누르면 150px + 10px = 160px : 150px 
+	-> 숫자 parseInt() + 10 + "px" 
+	top의 범위 - 150px ~ 300px / left의 범위 - 10px~50px
+	js에서 특별한 설정없이 사용하려면 div.offsetTop : pixel 단위의 숫잦로 받아낼 수 있다	*/
+	top: 150px;
+	left: 10px;
+	background: orange;	 
+	}
+</style>
+<script type="text/javascript">
+
+// var div;
+
+/* onload 이벤트에서 시작과 함께 한 번만 실행이되는 함수 */
+function init(){
+	div = sel("moveDiv")
+	div.style.top = "150px";
+	div.style.left = "10px";
+	div.offsetTop = "150px";
+}
+
+function move(){
+//	var div = sel("moveDiv");
+	alert("div.style.top : " + div.style.top); // init()가 실행되려면 값이 나온다. css만으로는 값이 나오지 않는다.
+	alert("div.offsetTop : " + div.offsetTop); // css로도 값이 나온다.
+	// parseInt()
+	alert("window.getComputedStyle(div).getPropertyValue('top') : " + window.getComputedStyle(div).getPropertyValue("top"));
+}
+
+
+	function moveUp(){
+	if (parseInt(div.style.top) > 150)
+	div.style.top = parseInt(div.style.top) - 10 + "px";
+	else
+	alert("위로 이동할 수 없습니다.");
+	}
+
+	function moveDown(){
+	if (parseInt(div.style.top) < 300)
+	div.style.top = parseInt(div.style.top) + 10 + "px";
+	else
+	alert("아래로 이동할 수 없습니다.");
+	}
+
+	function moveLeft(){
+	if (parseInt(div.style.left) > 10)
+	div.style.left = parseInt(div.style.left) - 10 + "px";
+	else
+	alert("왼쪽으로 이동할 수 없습니다.");
+	}
+
+	function moveRight(){
+	if (parseInt(div.style.left) < 300)
+	div.style.left = parseInt(div.style.left) + 10 + "px";
+	else
+	alert("오른쪽으로 움직일 수 없습니다.");
+	}
+
+</script>
+</head>
+<body onload = "init()">
+<table>
+	<tr><td></td><td class="moveBtn" onclick="moveUp()">^</td><td></td></tr>
+	<tr>
+		<td class="moveBtn" onclick="moveLeft()">&lt;</td><td></td>
+		<td class="moveBtn" onclick="moveRight()">&gt;</td>
+	</tr>
+	<tr><td></td><td class="moveBtn" onclick="moveDown()">v</td><td></td></tr>
+</table>
+<hr/>
+<div id="moveDiv"></div>
+</body>
+</html>

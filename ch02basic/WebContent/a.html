@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>페이지 이동시키는 a tag</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+/* 처음에 보여지는 a tag의 CSS */
+.btn_a{
+	/* 테두리 지정 */
+	/* 색 지정방법 
+	: red, black... 
+	: RGB(Red, Green, Blue)
+		> #RGB 한 자리로 표시-> #000(검정) ~ #FFF(흰색) -> R : 0~15(16개)단계의 색상을 표시할 수 있다.
+		> #RGB 두 자리로 표시-> #000000(검정) ~ #FFFFFF(흰색) -> R : 0~255(256개)단계의 색상을 표시할 수 있다.
+	*/	
+	border: 2px dashed #888;
+	/* 안에 글자와 테두리 사이의 여백 */
+	padding: 5px;
+	/* 객체와 밖과 사이의 여백 */
+	margin: 5px;
+	/* 글자 색 */
+	color: #888;
+	/* 글자의 밑줄 지우기 */
+	text-decoration: none;
+}
+
+/* a tag에 마우스가 올라갔을 때의 CSS */
+.btn_a:hover {
+	background: #b30000;
+	/* 글자색은 흰색 */
+	color: #FFF;
+}
+</style>
+</head>
+<body>
+<h3>텍스트를 클릭하면 페이지 이동</h3>
+<a href="gallery.html">gallery</a><br/>
+<a href="http://naver.com">네이버</a><br/>
+
+<h3>이미지를 클릭하면 페이지 이동</h3>
+<a href="gallery.html"><img src="img/s_snow01.jpg" width="50px" height="30px"></a><br/>
+<a href="http://naver.com"><img src="img/naver.png" width="50px" height="30px"></a><br/>
+
+<h3>텍스트 버튼을 클릭하면 페이지 이동</h3>
+<a href="gallery.html" class="btn_a">Gallery</a>
+<a href="http://naver.com" class="btn_a">Naver</a><br/>
+
+<h3>텍스트 버튼을 클릭하면 페이지 이동(BS)</h3>
+<a href="gallery.html" class="btn btn-default">Gallery</a>
+<a href="http://naver.com" class="btn btn-default">Naver</a><br/>
+</body>
+</html>
